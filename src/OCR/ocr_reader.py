@@ -32,7 +32,7 @@ list_appliances_in_use = [
     "frei",
     "Laufzeit:",
 ]
-regex_applances_times = r"\d{2}:\d{2}:\d{2}"
+regex_applances_times = r"\d{1,2}:\d{2}:\d{2}"
 
 
 def get_dict_appliances(result):
@@ -56,7 +56,10 @@ def get_dict_appliances(result):
                     if re.search(regex_applances_times, word.value):
                         appliances_times.append(word.value)
 
-    for i in range(len(appliances_numbers)):
+    if not (len(appliances_types) == len(appliances_numbers) == len(appliances_status)):
+        return []
+
+    for i in range(len(appliances_types)):
         appliances.append(
             {
                 "type": appliances_types[i],
@@ -73,7 +76,7 @@ def get_dict_appliances(result):
 
 
 def get_time_from_filename(filename):
-    re_extract_date_time = r"\d{4}\d{2}\d{2}-\d{2}\d{2}\d{2}"
+    re_extract_date_time = r"\d{4}\d{2}\d{2}[-|_]\d{2}\d{2}\d{2}"
     update_time = re.findall(re_extract_date_time, filename)[0]
 
     return datetime.strptime(update_time, "%Y%m%d-%H%M%S")
@@ -84,16 +87,18 @@ if __name__ == "__main__":
     supabase_auth = supabase.auth.sign_in_with_password({"email": user, "password": password})
 
     for file in files:
+        print("Processing file: " + file)
         result = model(DocumentFile.from_images(screenshots_dir + file))
 
         appliances = get_dict_appliances(result)
+        print(appliances)
 
         # Check if there was an error in the OCR
-        appliance_type = appliances[0].get("type")
         if (
             not appliances
-            or (appliance_type == "Waschmaschine" and len(appliances) != 4)
-            or (appliance_type == "Trockner" and len(appliances) != 2)
+            or not appliances[0].get("type")
+            or (appliances[0].get("type") == "Waschmaschine" and len(appliances) != 4)
+            or (appliances[0].get("type") == "Trockner" and len(appliances) != 2)
         ):
             os.rename(screenshots_dir + file, failed_dir + file)
             breakpoint
