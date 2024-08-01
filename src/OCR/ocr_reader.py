@@ -127,3 +127,5 @@ if __name__ == "__main__":
                 "update_time": str(get_time_from_filename(file)),
             }
         ).execute()
+
+    print("Done!")
