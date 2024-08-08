@@ -1,0 +1,1 @@
+adb pull /storage/emulated/0/Pictures/Screenshots/. ~/Projects/washing_machines_ilive/screenshots/landing_area
