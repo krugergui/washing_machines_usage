@@ -14,7 +14,6 @@ The data is always abailable through a third party app, this data is stored as a
 
 The analysis is done in a Jupyter notebook retrieving the data from the Postgres DB.
 
-
 ## Technologies used
 
 - Shell scripting (Linux)
@@ -39,6 +38,31 @@ Runs the OCR against the images, stores the valid results in a Postgres DB and m
 ### src/DE/data_exploration.ipynb
 
 The analysis in notebook form.
+
+## In the analysis the following graphs were created
+
+### Usage Timeline and Uptime for the whole period
+
+![alt text](doc/plots/usage_timeline_and_uptime.png)
+
+### Usage Timeline and Uptime for each week
+
+![alt text](doc/plots/usage_timeline_and_uptime_2024-07-01_2024-07-08.png)
+![alt text](doc/plots/usage_timeline_and_uptime_2024-07-08_2024-07-15.png)
+![alt text](doc/plots/usage_timeline_and_uptime_2024-07-15_2024-07-22.png)
+![alt text](doc/plots/usage_timeline_and_uptime_2024-07-22_2024-07-29.png)
+
+### Average use per time of day
+
+![alt text](doc/plots/average_use_per_time.png)
+
+### Most used weekdays
+
+![alt text](doc/plots/most_used_weekdays.png)
+
+### Most used times
+
+![alt text](doc/plots/most_used_time.png)
 
 # Conclusions found in the data exploration
 
