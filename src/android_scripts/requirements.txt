@@ -1,0 +1,2 @@
+AndroidApp:
+Macrodroid==5.46
