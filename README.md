@@ -1,10 +1,10 @@
 # Introduction
 
-This project aims to analyse the usage of the common washing machines in a particular apartment building in Berlin.
+This project aims to analyse the usage of the common area swashing machines in a particular apartment building.
 
 The data is extracted from a 3rd party app, run through OCR, stored in a Postgres DB and analyzed in a Jupyter notebook.
 
-The analysis results can be seen in the conclusions in this document.
+The analysis results can be seen in the conclusions at the bottom of this document.
 
 ## Project structure
 
