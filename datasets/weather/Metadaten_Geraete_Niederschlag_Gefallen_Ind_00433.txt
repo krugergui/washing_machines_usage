@@ -3,5 +3,5 @@ Stations_ID;Stationsname;Geo. Laenge [Grad];Geo. Breite [Grad];Stationshoehe [m]
 433;Berlin-Tempelhof;13.4;52.47;47.72;1;20081127;20170718;Niederschlags-Detektor;Niederschlagsdauer, elektr.;eor;
 433;Berlin-Tempelhof;13.4;52.47;47.72;1;20170719;20220912;Niederschlagswächter;Niederschlagsdauer, elektr.;eor;
 433;Berlin-Tempelhof;13.4;52.47;47.74;1;20220913;20231021;Niederschlagswächter;Niederschlagsdauer, elektr.;eor;
-433;Berlin-Tempelhof;13.4;52.47;47.74;1;20231026;20240328;Niederschlagswächter;Niederschlagsdauer, elektr.;eor;
-generiert: 03.04.2024 --  Deutscher Wetterdienst  --
+433;Berlin-Tempelhof;13.4;52.47;47.74;1;20231026;20240808;Niederschlagswächter;Niederschlagsdauer, elektr.;eor;
+generiert: 09.08.2024 --  Deutscher Wetterdienst  --
