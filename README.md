@@ -64,6 +64,16 @@ The analysis in notebook form.
 
 ![alt text](doc/plots/most_used_time.png)
 
+### Most used times per weekday
+
+![alt text](doc/plots/most_used_time_per_weekday_Sunday.png)
+![alt text](doc/plots/most_used_time_per_weekday_Monday.png)
+![alt text](doc/plots/most_used_time_per_weekday_Tuesday.png)
+![alt text](doc/plots/most_used_time_per_weekday_Wednesday.png)
+![alt text](doc/plots/most_used_time_per_weekday_Thursday.png)
+![alt text](doc/plots/most_used_time_per_weekday_Friday.png)
+![alt text](doc/plots/most_used_time_per_weekday_Saturday.png)
+
 # Conclusions found in the data exploration
 
 1. The dryers are not profitable and are just breaking even (See limitations #1 below)
